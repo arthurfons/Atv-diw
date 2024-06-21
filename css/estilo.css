@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c9c9c9;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content-left {
+    flex: 1;
+    padding-right: 2em;
+    margin-left: 3%;
+}
+
+.content-right {
+    flex: 2;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin: 1em;
+    flex: 1;
+    min-width: 200px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Media queries para responsividade */
+
+/* Tablet */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .card {
+        margin: 0.5em;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular */
+@media (max-width: 576px) {
+    header {
+        padding: 0.5em;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-left,
+    .content-right {
+        width: 100%;
+    }
+
+    .card-group {
+        flex-direction: column;
+    }
+
+    .carousel-inner img {
+        height: 150px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.hr{
+    height: 2px;
+    background-color: black;
+}
+.perfil{
+    margin-top: 1%;
+    margin-left: 3%;
+}
+.Avatar{
+    height: 20%;
+    width: 13%;
+}
+.imgneutra{
+    width: auto;
+}
+.colleague-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff; /* Fundo adicionado */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra adicionada */
+}
+
+.colleague {
+    text-align: center;
+}
+
+.colleague img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.imgcarre{
+    width: 100%;
+    height: 100%;
+}
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Define a altura desejada */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner mantendo a proporção */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+/* Estilização dos botões de navegação */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; /* Ajuste a largura do botão conforme necessário */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; /* Remove o fundo padrão das setas */
+    filter: invert(100%); /* Torna as setas visíveis (brancas) */
+}
+
+.carousel-control-prev .visually-hidden, .carousel-control-next .visually-hidden {
+    color: black; /* Define o texto como preto */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon, 
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: transparent; /* Garante que o fundo permaneça transparente ao passar o mouse */
+    filter: invert(50%); /* Torna as setas mais visíveis ao passar o mouse (cinza) */
+}
+
+/* Remove o fundo padrão dos botões */
+.carousel-control-prev,
+.carousel-control-next {
+    background: none;
+    border: none;
+}
+
+.carousel-control-prev:focus, .carousel-control-next:focus {
+    outline: none;
+    box-shadow: none;
+}
+.card {
+    max-width: 300px; /* Define a largura máxima da caixa */
+    margin: 10px; /* Espaçamento entre as caixas */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse a caixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.imgcarre {
+    width: 65%; /* Ajusta a largura da imagem à largura da caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Corta a imagem para cobrir o espaço do elemento */
+    object-position: center; /* Centraliza a imagem */
+}
+
+.card-body {
+    padding: 15px; /* Adiciona espaçamento interno */
+}
+
+.card-title {
+    font-size: 1.25em; /* Tamanho da fonte do título */
+}
+
+.card-text {
+    margin-top: 10px; /* Espaçamento entre os parágrafos */
+}
